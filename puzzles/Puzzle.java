@@ -15,7 +15,7 @@ public class Puzzle {
         return tenRandom;
     }
 
-    public Character getOneLetter() {
+    public Character getRandomLetter() {
         char[] letters = {'A','B','C','D','E','F','G','H',
         'I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'}; 
         int chooseOne = randMachine.nextInt(26);
@@ -23,10 +23,10 @@ public class Puzzle {
         return oneLetter;
     } 
 
-    public String randomPassword() {
+    public String generatePassword () {
         String password = "";
         for (int i = 1; i <= 8; i++) {
-            char randomLetter = getOneLetter();
+            char randomLetter = getRandomLetter();
             password += randomLetter;
         }
         return password;
@@ -36,7 +36,7 @@ public class Puzzle {
     public ArrayList<String> getNewPasswordSet(int howMany) {
         ArrayList<String> passwordSet = new ArrayList<String>();
         for (int i = 0; i < howMany; i++) {
-            passwordSet.add(randomPassword());
+            passwordSet.add(generatePassword());
         }
         return passwordSet;
     }
