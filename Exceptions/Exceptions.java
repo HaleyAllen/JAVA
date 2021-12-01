@@ -13,8 +13,8 @@ class Exceptions {
         for(int i = 0; i < myList.size(); i++) {
             try {
                 Integer castedValue = (Integer) myList.get(i);
-            } catch (ClassCastException e) {
-                System.out.println(e);
+            } catch (ClassCastException a) {
+                System.out.println(a);
             }
         }
     }
