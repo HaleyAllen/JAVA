@@ -19,7 +19,8 @@ public class BankAccount {
 
     // methods
     public void checkingDeposit(double amount) {
-        setCheckingBalance(getCheckingBalance() + amount);
+        this.checkingBalance += amount;
+        // setCheckingBalance(getCheckingBalance() + amount);
         totalAmount += amount;
     }
 
