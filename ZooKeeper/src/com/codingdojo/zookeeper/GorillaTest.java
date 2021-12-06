@@ -6,7 +6,7 @@ public class GorillaTest {
 		
 		Gorilla george = new Gorilla();
 		george.displayEnergy();
-		System.out.println("Hello World");
+		System.out.println("Number Of Mammals: " + Mammal.mammalCount);
 
 	}
 
