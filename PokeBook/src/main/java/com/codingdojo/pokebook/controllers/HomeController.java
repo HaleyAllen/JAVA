@@ -24,7 +24,7 @@ public class HomeController {
 	@Autowired
 	ExpenseService expenseService;
 	
-	@GetMapping("/pokebook")
+	@GetMapping("/")
 	public String dashboard(Model model, @ModelAttribute("newExpense")Expense newExpense) {
 		List<Expense> expenses = expenseService.allExpenses();
 			model.addAttribute("expenses", expenses);
