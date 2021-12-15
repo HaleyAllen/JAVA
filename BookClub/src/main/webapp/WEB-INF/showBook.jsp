@@ -43,7 +43,8 @@
 		<div class="mt-5">
 		<c:choose>
 			<c:when test="${book.user.id == user_id}">
-				<a href="/edit/${book.id}" class="btn btn-secondary btn-sm">edit</a>
+				<a href="/edit/${book.id}" class="btn btn-secondary btn-sm">Edit</a>
+				<a href="/delete/${book.id}" class="btn btn-secondary btn-sm">Delete</a>
 			</c:when>
 		</c:choose>	
 		</div>

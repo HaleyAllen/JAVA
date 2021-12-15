@@ -37,7 +37,8 @@
 				      <th class="col-1">ID</th>
 				      <th class="col-4">Title</th>
 				      <th class="col-3">Author Name</th>   
-				      <th class="col-2">Posted By</th>   
+				      <th class="col-2">Posted By</th>
+					  <th class="col-5">Actions</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -47,6 +48,17 @@
 	   					<td><a href="/show/${book.id}"><c:out value="${book.title}"/></a></td>
 	   					<td><c:out value="${book.author}"/></td>			    					  					
 	   					<td><c:out value="${book.user.userName}"/></td>			    					  					
+						<td>
+							<c:choose>
+								<c:when test="${book.user.id == user_id}">
+									<a href="/edit/${book.id}" class="btn btn-secondary btn-sm">Edit</a>
+									<a href="/delete/${book.id}" class="btn btn-secondary btn-sm">Delete</a>
+								</c:when>
+								<c:otherwise>
+									<p>None</p>
+								</c:otherwise>
+							</c:choose>	
+						</td>
 				  	</tr>
 					</c:forEach>								<!-- END LOOP -->
 				</tbody>
