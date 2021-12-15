@@ -33,8 +33,8 @@
 				</div>
 			</c:when>
 			<c:otherwise>
-				<h3 class="mt-5"><span style="color:red">${userName}</span> read <span style="color:RebeccaPurple">${book.title}</span> by <span style="color:green">${book.author}</span>.</h3>
-				<h4 class="mt-3">Here are ${userName}'s thoughts:</h4>
+				<h3 class="mt-5"><span style="color:red">${book.user['userName']}</span> read <span style="color:RebeccaPurple">${book.title}</span> by <span style="color:green">${book.author}</span>.</h3>
+				<h4 class="mt-3">Here are ${book.user['userName']}'s thoughts:</h4>
 				<div class="border-top border-bottom p-3 mt-5">
 					<h5 >${book.thoughts}</h5>
 				</div>
