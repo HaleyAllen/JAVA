@@ -51,8 +51,14 @@
 						<td>
 							<c:choose>
 								<c:when test="${book.user.id == user_id}">
-									<a href="/edit/${book.id}" class="btn btn-secondary btn-sm">Edit</a>
-									<a href="/delete/${book.id}" class="btn btn-secondary btn-sm">Delete</a>
+									<div class="d-flex justify-content-around align-items-center">
+										<a href="/edit/${book.id}" class="btn btn-secondary btn-sm">Edit</a>
+										<form action="/delete/${book.id}" method="post">
+											<input type="hidden" name="_method" value="delete">
+											<input type="submit" value="Delete">
+										</form>
+									</div>
+										
 								</c:when>
 								<c:otherwise>
 									<p>None</p>
